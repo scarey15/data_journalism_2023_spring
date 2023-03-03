@@ -25,6 +25,10 @@ In this notebook, we are reverse engineering the story, [STORY NAME](STORY URL)
 Loading required libraries for this analysis.
 
 ```{r echo=FALSE, message=FALSE}
+options(scipen=999)
+library(tidyverse)
+library(lubridate)
+library(janitor)
 
 ```
 
@@ -34,7 +38,8 @@ In this section, describe the source of the data, write a basic data dictionary 
 
 ```{r}
 # Load required data
-
+dc_comicbooks <- read_csv("data/dc_comicbooks.csv") %>% 
+  clean_names()
 # Path to data should be loaded from folder "data" i.e. read_csv("data/name_of_data.csv")
 
 # Clean required data and prepare for analysis if needed. 
@@ -47,11 +52,15 @@ In this notebook, we are reverse engineering five sentences from the story.
 
 ### Sentence 1
 
-* **Sentence text**: [Paste in sentence to engineer here]
-* **Analysis summary**: [Write up two to three sentences describing the results of your analysis.  Were you able to confirm the finding? If not, why not?]
+* **Sentence text**: "The characters within them are also disproportionately men, as are the new characters introduced each year."
+* **Analysis summary**: The results show that 1,967/6,896 characters identify as female characters. This code also provides us information about their sexual identity as some are represented as "homosexual characters". When I changed the filter of sex from female to male, the number if results increased to 4,783/6,896. Through this coode, the findings in the article were correct.
 
 ```{r}
 # Put code to reverse engineer sentence here
+dc_comicbooks %>% 
+  filter(sex == "Female Characters") %>% 
+  group_by(year) %>% 
+arrange(desc(year))
 
 # Display results of code below this codeblock
 
