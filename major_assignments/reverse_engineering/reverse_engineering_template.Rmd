@@ -1,7 +1,7 @@
 ---
 title: "Reverse Engineering Project"
-author: "Student names here"
-date: "Date here"
+author: "Dorothy Hood and Sam Carey"
+date: "2023-03-03"
 output:
   html_document:
     theme: cerulean
@@ -18,7 +18,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Introduction 
 
-In this notebook, we are reverse engineering the story, [STORY NAME](STORY URL)
+In this notebook, we are reverse engineering the story, [Comic Books Are Still Made By Men, For Men And About Men](https://fivethirtyeight.com/features/women-in-comic-books/)
 
 ## Load libraries
 
@@ -65,7 +65,7 @@ arrange(desc(year))
 
 # Display results of code below this codeblock
 marvel_data %>% 
-  filter(sex == "Fem3,8ale Characters") %>% 
+  filter(sex == "Female Characters") %>% 
   group_by(year) %>% 
 arrange(desc(year))
 ```
