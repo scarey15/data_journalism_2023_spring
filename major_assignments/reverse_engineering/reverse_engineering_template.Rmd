@@ -72,7 +72,7 @@ arrange(desc(count))
 
 ### Sentence 2
 
-* **Sentence text**: Females make up about one in four comic book characters.
+* **Sentence text**: "Females make up about one in four comic book characters."
 * **Analysis summary**: This code shows how we combined both data sets into one, allowing us to easily search between the two for results. By grouping the data by sex, and then filtering it by female characters, we are able to see how many there are in total throughout all the data. If you take the total number of female characters, 5,804 and divide it by the total number of characters, 23,272 multiply by 100, you get 24.9 or 25%, which is 1 in 4. So, this then proves what was stated in the sentence. 
 
 ```{r}
@@ -95,9 +95,9 @@ dc_and_marvel %>%
 
 ### Sentence 3
 
-* **Sentence text**: Of characters with gender data and 100 or more appearances (294 DC characters and 414 Marvel characters), only 29.0 percent of DC’s are female, and a similar 31.1 percent of the Marvel crowd is.
+* **Sentence text**: "Of characters with gender data and 100 or more appearances (294 DC characters and 414 Marvel characters), only 29.0 percent of DC’s are female, and a similar 31.1 percent of the Marvel crowd is."
 
-* **Analysis summary**: We first made new data frames to hold each character in each company and if they appeared 100 or more times. In dc_character_appearcount, we can see 294 comic book characters, and in the marvel_character_appearcount, we can see 414. This proves the first part ofo the sentence. Then, we filtered out from those data frames which characters were females and appeared 100 or more times. In DC, we got 85 characters, and in the Marvel data we got 128. If you take 85 and divide it by 294, then multiply it by 100, you get 28.9%. If you take 128 and divide it by 414 and then multiply it by 100, you get 30.9%. Although not exactly 29.0% and 31.1% like the sentence says, the numbers we got can be rounded and are extremely similar. This proved the sentence. 
+* **Analysis summary**: We first made new data frames to hold each character in each company and if they appeared 100 or more times. In dc_character_appearcount, we can see 294 comic book characters, and in the marvel_character_appearcount, we can see 414. This proves the first part of the sentence. Then, we filtered out from those data frames which characters were females and appeared 100 or more times. In DC, we got 85 characters, and in the Marvel data we got 128. If you take 85 and divide it by 294, then multiply it by 100, you get 28.9%. If you take 128 and divide it by 414 and then multiply it by 100, you get 30.9%. Although not exactly 29.0% and 31.1% like the sentence says, the numbers we got can be rounded and are extremely similar. This proved the sentence. 
 
 ```{r}
 # Put code to reverse engineer sentence here
