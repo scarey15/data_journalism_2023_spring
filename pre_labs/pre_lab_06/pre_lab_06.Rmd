@@ -74,7 +74,7 @@ view(maryland_population)
 ### Task 6: Join population and voter data
 
 **Task** Run the following code to join Maryland population data and the 2022 voter registration data together using the common column county as the key. How many rows are there now? How many *should* there be? 
-**Answer** There are 24 rows now, technically there are only 23 counties in Maryland, but they include Baltimore City into the results. 
+**Answer** There are 24 rows now, there should be 24.
 
 ```{r}
 # with nrow included to show row total
