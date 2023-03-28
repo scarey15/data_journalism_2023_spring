@@ -223,7 +223,7 @@ md_high_schools_with_acs <- md_high_schools_with_acs %>% mutate(min=(estimate-mo
 
 
 **Task** Let's look at the average household income for high schools that have 60% or more graduates immediately enrolling in college, and then look at those with less than 40%. Write a sentence describing the results.
-**Answer** It can be interpreted that the higher the income of the student, the less likely they are to graduate highschool than their poorer counterparts. This is obviously a very broad overview of the whole issue.
+**Answer** It can be interpreted that with wealth come the expectation for going to college, more than their counterparts who aren't as wealthy. 
 
 ```{r}
 md_high_schools_with_acs %>%
